@@ -42,17 +42,12 @@ jobs:
           echo "PRIVATE_KEY=${{ secrets.PRIVATE_KEY }}" >> .env.production
           echo "SHYFT_API_KEY=${{ vars.SHYFT_API_KEY }}" >> .env.production
           echo "NEXT_PUBLIC_SHYFT_URL=${{ vars.NEXT_PUBLIC_SHYFT_URL }}" >> .env.production
-          echo "DASAPI_CLUSTER_URL_1=${{ vars.DASAPI_CLUSTER_URL_1 }}" >> .env.production
-          echo "DASAPI_CLUSTER_URL_2=${{ vars.DASAPI_CLUSTER_URL_2 }}" >> .env.production
           echo "DATABASE_URL=${{ secrets.DATABASE_URL }}" >> .env.production
           echo "DIRECT_URL=${{ secrets.DIRECT_URL }}" >> .env.production
           echo "AUTH_URL=${{ vars.AUTH_URL }}" >> .env.production
           echo "AUTH_TRUST_HOST=${{ vars.AUTH_TRUST_HOST }}" >> .env.production
           echo "SASS_SERVICE_URL=${{ vars.SASS_SERVICE_URL }}" >> .env.production
           echo "SASS_SERVICE_API_KEY=${{ vars.SASS_SERVICE_API_KEY }}" >> .env.production
-          echo "NEXT_PUBLIC_SUPABASE_URL=${{ vars.NEXT_PUBLIC_SUPABASE_URL }}" >> .env.production
-          echo "NEXT_PUBLIC_SUPABASE_ANON_KEY=${{ vars.NEXT_PUBLIC_SUPABASE_ANON_KEY }}" >> .env.production
-          echo "SUPABASE_SECRET=${{ secrets.SUPABASE_SECRET }}" >> .env.production
         working-directory: ${{ github.workspace }}
 
       - name: Build docker image
